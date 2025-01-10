@@ -1,0 +1,72 @@
+/* Main styles for the election results page */
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f8fafc;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+h1 {
+  color: #1e40af;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+li {
+  padding: 1.25rem 2rem;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.125rem;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+li:hover {
+  background-color: #f8fafc;
+}
+
+li::after {
+  content: attr(data-votes);
+  font-weight: 600;
+  color: #1e40af;
+}
+
+a {
+  display: block;
+  text-align: center;
+  margin-top: 2rem;
+  color: #1e40af;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #1e40af;
+  border-radius: 6px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a:hover {
+  background-color: #1e40af;
+  color: white;
+  text-decoration: none;
+}

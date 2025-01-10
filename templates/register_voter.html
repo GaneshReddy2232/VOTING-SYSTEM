@@ -1,0 +1,112 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Register Voter</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/register_voter.css')}}">
+</head>
+<body>
+    <h1>Register as Voter</h1>
+    <form method="post">
+        <label for="voter_id">Voter ID:</label>
+        <input type="number" id="voter_id" name="voter_id" min="1" required>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <button type="submit">Register</button>
+    </form>
+    {% if message %}
+    <p>{{ message }}</p>
+    {% endif %}
+    <a href="/">Back to Home</a>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Voter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/register_voter.css') }}">
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6">
+                    <div class="card registration-card">
+                        <div class="card-header text-white p-4">
+                            <div class="d-flex align-items-center">
+                                <div class="header-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <line x1="19" y1="8" x2="19" y2="14"></line>
+                                        <line x1="22" y1="11" x2="16" y2="11"></line>
+                                    </svg>
+                                </div>
+                                <h1 class="h3 mb-0 ms-3">Register as Voter</h1>
+                            </div>
+                        </div>
+                        <div class="card-body p-4">
+                            <form method="post" class="registration-form">
+                                <div class="mb-4">
+                                    <label for="voter_id" class="form-label">Voter ID</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                                                <line x1="7" y1="8" x2="7" y2="8"></line>
+                                                <line x1="7" y1="12" x2="7" y2="12"></line>
+                                                <line x1="7" y1="16" x2="7" y2="16"></line>
+                                                <line x1="11" y1="8" x2="17" y2="8"></line>
+                                                <line x1="11" y1="12" x2="17" y2="12"></line>
+                                                <line x1="11" y1="16" x2="17" y2="16"></line>
+                                            </svg>
+                                        </span>
+                                        <input type="number" class="form-control" id="voter_id" name="voter_id" min="1" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label for="name" class="form-label">Full Name</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                                <circle cx="12" cy="7" r="4"></circle>
+                                            </svg>
+                                        </span>
+                                        <input type="text" class="form-control" id="name" name="name" required>
+                                    </div>
+                                </div>
+
+                                {% if message %}
+                                <div class="alert custom-alert alert-dismissible fade show" role="alert">
+                                    {{ message }}
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                                {% endif %}
+
+                                <div class="d-grid gap-2">
+                                    <button type="submit" class="btn btn-primary btn-lg submit-btn">Register Now</button>
+                                    <a href="/" class="btn btn-outline-secondary back-btn">Back to Home</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

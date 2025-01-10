@@ -1,0 +1,93 @@
+/* Main styles for the audit logs page */
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fafafa;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+h1 {
+  color: #374151;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 2.25rem;
+  font-weight: 700;
+  border-bottom: 3px solid #e5e7eb;
+  padding-bottom: 1rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+li {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
+  font-size: 0.875rem;
+  color: #4b5563;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+li:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+li:hover {
+  background-color: #f3f4f6;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+a {
+  display: inline-block;
+  text-align: center;
+  margin-top: 2rem;
+  color: #4b5563;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  padding: 0.75rem 1.5rem;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+a:hover {
+  background-color: #f3f4f6;
+  color: #111827;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Timestamp styling if logs contain timestamps */
+li time {
+  color: #6b7280;
+  margin-right: 0.75rem;
+}
+
+/* Style for different log levels if present */
+li[data-level="error"] {
+  border-left: 4px solid #ef4444;
+  background-color: #fef2f2;
+}
+
+li[data-level="warning"] {
+  border-left: 4px solid #f59e0b;
+  background-color: #fffbeb;
+}
+
+li[data-level="info"] {
+  border-left: 4px solid #3b82f6;
+  background-color: #eff6ff;
+}
